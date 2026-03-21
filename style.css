@@ -1,0 +1,133 @@
+:root {
+  --bg-error: #380909;
+  --bg-success: #022c1f;
+  --black: #000;
+  --error: #ff4d4d;
+  --loading: #888;
+  --primary: #00ff9c;
+  --size: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background: var(--black);
+  color: var(--primary);
+  display: flex;
+  font-family: monospace;
+  font-size: var(--size);
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.middle-layout {
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  max-width: 800px;
+  padding: 20px;
+  width: 90%;
+}
+
+.title {
+  border-bottom: 1px solid;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+button {
+  border: 1px solid;
+  cursor: pointer;
+  flex: 1;
+  font: inherit;
+  padding: 8px;
+  transition: all 0.2s ease;
+}
+
+#successBtn {
+  background: var(--bg-success);
+  color: var(--primary);
+}
+
+#failedBtn {
+  background: var(--bg-error);
+  color: var(--error);
+}
+
+button:hover,
+button:focus {
+  filter: brightness(2);
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+#nameList {
+  list-style: none;
+}
+
+#nameList li{
+  margin: 5px;
+  padding: 5px;
+}
+
+#nameList li::before {
+  content: "> ";
+}
+
+#loading {
+  color: var(--loading);
+  display: none;
+  font-style: italic;
+}
+
+.errorMessage {
+  color: var(--error);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --size: 18px;
+  }
+  .middle-layout {
+    padding: 15px;
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --size: 16px;
+  }
+  .buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+  #nameList li {
+    margin: 2px;
+    padding: 2px;
+  }
+}
+
+@media (max-width: 320px) {
+  :root {
+    --size: 14px;
+  }
+}
