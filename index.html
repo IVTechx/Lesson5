@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Fetching</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="middle-layout">
+      <header>
+        <h1 class="title">Fetching data practice</h1>
+      </header>
+
+      <div class="buttons">
+        <button type="button" id="successBtn">Fetch with Header</button>
+        <button type="button" id="failedBtn">Fetch without Header</button>
+      </div>
+
+      <main id="main-body">
+        <div class="result">
+          <p id="loading">Loading...</p>
+          <ul id="nameList"></ul>
+        </div>
+      </main>
+    </div>
+
+    <!-- Using await -->
+    <script src="main.js"></script>
+
+    <!-- Using promises -->
+    <!-- <script src="test.js"></script> -->
+  </body>
+</html>
